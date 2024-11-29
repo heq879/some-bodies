@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "notoserif-rg";
+    src: url("asset/Noto_Serif_SC/static/NotoSerifSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "notoserif-light";
+    src: url("asset/Noto_Serif_SC/static/NotoSerifSC-Light.ttf");
+}
+
+@font-face {
+    font-family: "pinyonscript";
+    src: url("asset/PinyonScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "fathers";
+    src: url("asset/Fathers-BF654cd265614b2.otf");
+}
+
+@font-face {
+    font-family: "crimison-text-reg";
+    src: url("asset/CrimsonText-Regular.ttf");
+}
+
+@font-face {
+    font-family: "crimison-text-italic";
+    src: url("asset/CrimsonText-Italic.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 24px;
+    font-family: "fathers", serif;
+    color:white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure nav stays above other content */
+}
+
+.c-text {
+    font-family: "notoserif-rg";
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.bottom-txt {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-family: notoserif-rg;
+    font-size: 24px;
+    color: white;
+    margin-top: auto; /* Pushes it to the bottom */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+    align-items: center; /* Horizontally centers the content */
+    flex-grow: 1; /* Allow main to grow and take up the available space */
+    padding: 20px;
+}
+
+.case-info {
+    padding: 40px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.case-info h2 {
+    font-family: notoserif-rg, serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#case-number {
+    font-family: "CrimsonText", serif; /* Match the rest of your design font */
+    font-size: 24px;  /* Adjust size as needed */
+    color: white; /* Ensure it's visible against the background */
+    z-index: 1001;  /* Make sure it's in front of other elements */
+    position: relative; /* To avoid any conflict with positioning */
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    width: 150px;
+    font-family: notoserif-rg, serif;
+    font-size: 16px;
+    color: white;
+}
+
+.input-field input,
+.input-field textarea {
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-family: notoserif-rg, serif;
+    font-size: 16px;
+    border: solid 1px white;
+    border-radius: 4px;
+    background: none;
+    color: white;
+    font-family: "CrimsonText", serif; 
+}
+
+#summary {
+    height: 150px; 
+}
+
+
+/* Button Styling */
+.submit-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the button */
+    margin-top: 20px; /* Adds some space above the button */
+    margin-left:125px ;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    font-family: notoserif-rg, serif;
+    font-size: 24px;
+    color: white; /* Change text color to white */
+    background-color: transparent; /* Remove background color */
+    border: 1px solid white; /* Add a solid white border */
+    border-radius: 5px;
+    font-family: "CrimsonText", serif; /* Change font to Crimson Text */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#submit-btn:hover {
+    background-color: white; /* Add white background on hover */
+    color: #111; /* Change text color to dark on hover */
+}
+
+#submit-btn:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Ensure other content doesn't overlap */
+.report-heading {
+    font-family: notoserif-rg, serif;
+    font-weight: bold;
+}
+
+/* Cursor styling */
+.cursor {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    z-index: 1000;
+}
+
+/* Language Toggle */
+body.eng {
+    background-color: #F5F5F5;  
+}
+
+body.eng .nav-item,
+body.eng .c-text
+ {
+    color: black; 
+}
+
+body.eng .chinese-text {
+    font-family: "crimison-text-italic",serif;
+    font-size: 76px;
+    color: black;
+}
+
+body.eng .report-text {
+    font-family: "crimison-text-reg",serif;
+    font-size: 24px;
+    color: black
+}
+
+body.eng .report-heading::before {
+    font-family: "crimison-text-italic", serif;
+    font-weight: 400; /* Adjust this value for English */
+}
+
+body.eng .bottom-txt .chinese-text {
+    font-family: "fathers", serif;
+    font-size: 24px;
+    color: black;  /* Change text color to black in the bottom text */
+}
+
+body.eng h2{
+    font-family: "CrimsonText", serif; /* Change font to Crimson Text */
+    color: black; /* Change text color to black */
+}
+
+body.eng #case-number {
+    font-family: "CrimsonText", serif; /* Change font to Crimson Text */
+    color: black; /* Change text color to black */
+}
+
+body.eng #submit-btn {
+    font-family: "CrimsonText", serif; /* Change font to Crimson Text */
+    color: black; /* Change text color to black */
+    border: 1px solid black; /* Change border color to black */
+}
+
+body.eng .input-field input,
+body.eng .input-field textarea {
+    border: 1px solid black; /* Change border color to black */
+    color: black; /* Change text color to black */
+}
+
+/* Ensure the labels also follow the English style */
+body.eng .input-field label {
+    font-family: "CrimsonText", serif; /* Change label font to Crimson Text */
+    color: black; /* Change label text color to black */
+}
+

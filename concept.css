@@ -1,0 +1,160 @@
+/* Font Faces */
+@font-face {
+    font-family: "notoserif-rg";
+    src: url("asset/Noto_Serif_SC/static/NotoSerifSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "notoserif-light";
+    src: url("asset/Noto_Serif_SC/static/NotoSerifSC-Light.ttf");
+}
+
+@font-face {
+    font-family: "pinyonscript";
+    src: url("asset/PinyonScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "fathers";
+    src: url("asset/Fathers-BF654cd265614b2.otf");
+}
+
+@font-face {
+    font-family: "crimison-text-reg";
+    src: url("asset/CrimsonText-Regular.ttf");
+}
+
+@font-face {
+    font-family: "crimison-text-italic";
+    src: url("asset/CrimsonText-Italic.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+body {
+    background-color: #111;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 24px;
+    font-family: "fathers",serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure nav stays above other content */
+}
+
+.nav-item {
+    position: relative;
+    color:white;
+}
+
+.bottom-txt {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-family: notoserif-rg;
+    font-size: 24px;
+    color: white;
+  }
+
+.c-text {
+    font-family: "notoserif-rg";
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-family: "notoserif-rg", serif;
+    font-weight: 400;
+    color: white;
+    font-size: 64px;
+    margin-top: 100px;
+}
+
+.sub-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    align-items: center; 
+    padding: 2rem 10rem;
+    gap: 2rem;
+}
+
+.summary {
+    margin-top: 200px;
+    font-family: "notoserif-light", serif;
+    font-weight: 200;
+    font-size: 24px;
+    color: white;
+    line-height: 2;
+    align-self: flex-start;
+}
+
+.report-heading {
+    font-family: notoserif-rg, serif;
+    font-weight: bold;
+}
+
+/* Cursor styling */
+.cursor {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    z-index: 1000;
+}
+
+/* Language Toggle */
+body.eng {
+    background-color: #F5F5F5;  
+}
+
+body.eng .nav-item,
+body.eng .c-text
+ {
+    color: black; 
+}
+
+body.eng .chinese-text {
+    font-family: "crimison-text-italic",serif;
+    font-size: 76px;
+    color: black;
+}
+
+body.eng .report-text {
+    font-family: "crimison-text-reg",serif;
+    font-size: 24px;
+    color: black
+}
+
+body.eng .report-heading::before {
+    font-family: "crimison-text-italic", serif;
+    font-weight: 400; /* Adjust this value for English */
+}
+
+body.eng .bottom-txt .chinese-text {
+    font-family: "fathers", serif;
+    font-size: 24px;
+    color: black;  /* Change text color to black in the bottom text */
+}

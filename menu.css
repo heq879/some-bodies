@@ -1,0 +1,201 @@
+/* Font Faces */
+@font-face {
+    font-family: "notoserif-rg";
+    src: url("asset/Noto_Serif_SC/static/NotoSerifSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "pinyonscript";
+    src: url("asset/PinyonScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "fathers";
+    src: url("asset/Fathers-BF654cd265614b2.otf");
+}
+
+@font-face {
+    font-family: "crimison-text-reg";
+    src: url("asset/CrimsonText-Regular.ttf");
+}
+
+@font-face {
+    font-family: "crimison-text-italic";
+    src: url("asset/CrimsonText-Italic.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 24px;
+    font-family: "fathers",serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure nav stays above other content */
+}
+
+.nav-item {
+    position: relative;
+    color:white;
+}
+
+.main-link {
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 150px;
+    z-index: 1000;
+
+}
+
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    font-family: "notoserif-rg",serif;
+    color: #BB0000;
+    text-align: center;
+}
+
+/* Show dropdown only when hovering over the main-link */
+.main-link:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+
+.c-text {
+    font-family: "notoserif-rg",serif;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+}
+
+.title {
+    font-family: "notoserif-rg",serif;
+    font-weight: 500;
+    color: white;
+    font-size: 64px;
+    margin-top: 100px;
+}
+
+.list-container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between; /* Keeps value on the right */
+    padding: 1.5rem 0;
+    border-bottom: 2.5px dotted white;
+    align-items: center;
+}
+
+.list-item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.hover-image {
+    display: none;
+    position: absolute;
+    left: calc(100% + 30px); /* Position after the text with some spacing */
+    width: auto;
+    height: auto;
+    max-height: 300px;
+}
+
+.list-item:hover .hover-image {
+    display: block;
+}
+
+.item-number {
+    font-family: "crimison-text-reg",serif;
+    font-size: 24px;
+    color: white;
+}
+
+.chinese-text.item-description {
+    font-family: "notoserif-rg", serif;
+    font-size: 16px;
+    color: white;
+}
+
+.item-value {
+    font-family: "crimison-text-reg",serif;
+    font-size: 24px;
+    color: white;
+}
+
+/* Language Toggle */
+body.eng {
+    background-color: #F5F5F5;  
+}
+
+body.eng .nav-item,
+body.eng .c-text,
+body.eng .item-number,
+body.eng .item-value {
+    color: black; 
+}
+
+body.eng .chinese-text.item-description {
+    font-family: "crimison-text-reg",serif;
+    font-size: 18px;
+    color: black;
+}
+
+body.eng .list-item {
+    border-bottom: 2.5px dotted black;
+}
+
+.list-item.clicked {
+    border-bottom: 2.5px dotted black;
+}
+
+body.eng .chinese-text {
+    font-family: "crimison-text-italic",serif;
+    font-size: 76px; 
+    color:black;
+}
+
+body.eng .dropdown-menu a {
+    font-family: "fathers", serif;
+}
+
+
