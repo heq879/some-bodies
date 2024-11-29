@@ -32,7 +32,6 @@
 * {
     margin: 0;
     padding: 0;
-    cursor: none;
 }
 
 a {
@@ -53,12 +52,12 @@ body {
     padding: 2rem;
     font-size: 24px;
     font-family: "fathers", serif;
-    color:white;
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure nav stays above other content */
+    z-index: 1000;
 }
 
 .c-text {
@@ -72,18 +71,18 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    font-family: notoserif-rg;
+    font-family: "notoserif-rg", serif;
     font-size: 24px;
     color: white;
-    margin-top: auto; /* Pushes it to the bottom */
+    margin-top: auto; /* Pushed to the bottom */
+    flex-grow: 1; /* Allow bottom text to take remaining space */
 }
-
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically centers the content */
-    align-items: center; /* Horizontally centers the content */
-    flex-grow: 1; /* Allow main to grow and take up the available space */
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     padding: 20px;
 }
 
@@ -150,20 +149,19 @@ main {
 
 #submit-btn {
     padding: 10px 20px;
-    font-family: notoserif-rg, serif;
+    font-family: "CrimsonText", serif;
     font-size: 24px;
-    color: white; /* Change text color to white */
-    background-color: transparent; /* Remove background color */
-    border: 1px solid white; /* Add a solid white border */
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
     border-radius: 5px;
-    font-family: "CrimsonText", serif; /* Change font to Crimson Text */
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    transition: all 0.3s ease;
 }
 
 #submit-btn:hover {
-    background-color: white; /* Add white background on hover */
-    color: #111; /* Change text color to dark on hover */
+    background-color: white;
+    color: #111;
 }
 
 #submit-btn:focus {
@@ -191,7 +189,7 @@ main {
 
 /* Language Toggle */
 body.eng {
-    background-color: #F5F5F5;  
+    background-color: #F5F5F5;
 }
 
 body.eng .nav-item,
@@ -201,7 +199,7 @@ body.eng .c-text
 }
 
 body.eng .chinese-text {
-    font-family: "crimison-text-italic",serif;
+    font-family: "crimison-text-italic", serif;
     font-size: 76px;
     color: black;
 }

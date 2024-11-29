@@ -20,25 +20,27 @@
 }
 
 @font-face {
-    font-family: "crimison-text-reg";
+    font-family: "crimson-text-reg";  /* Corrected typo from "crimison" */
     src: url("asset/CrimsonText-Regular.ttf");
 }
 
 @font-face {
-    font-family: "crimison-text-italic";
+    font-family: "crimson-text-italic"; /* Corrected typo from "crimison" */
     src: url("asset/CrimsonText-Italic.ttf");
 }
 
-
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
-    cursor: none;
+    cursor: none; 
 }
 
+/* Body styles */
 body {
     background-color: #111;
     min-height: 100vh;
+    padding-top: 4rem; /* Add padding to avoid content being hidden under fixed nav */
 }
 
 a {
@@ -46,24 +48,26 @@ a {
     color: inherit;
 }
 
+/* Navigation styles */
 .nav {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     font-size: 24px;
-    font-family: "fathers",serif;
+    font-family: "fathers", serif;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure nav stays above other content */
+    z-index: 1000;
 }
 
 .nav-item {
-    position: relative;
-    color:white;
+    color: white;
+    /* Removed position: relative since it's unnecessary */
 }
 
+/* Bottom text layout */
 .bottom-txt {
     display: flex;
     justify-content: space-between;
@@ -71,8 +75,9 @@ a {
     font-family: notoserif-rg;
     font-size: 24px;
     color: white;
-  }
+}
 
+/* Text styles */
 .c-text {
     font-family: "notoserif-rg";
     font-size: 24px;
@@ -91,14 +96,15 @@ a {
 .sub-content {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
-    align-items: center; 
+    align-items: center;
     padding: 2rem 10rem;
     gap: 2rem;
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
+/* Adjust the margin to make it more responsive */
 .summary {
-    margin-top: 200px;
+    margin-top: 4rem; /* Changed from 200px to rem for better responsiveness */
     font-family: "notoserif-light", serif;
     font-weight: 200;
     font-size: 24px;
@@ -107,12 +113,13 @@ a {
     align-self: flex-start;
 }
 
+/* Report heading */
 .report-heading {
     font-family: notoserif-rg, serif;
     font-weight: bold;
 }
 
-/* Cursor styling */
+/* Cursor styles */
 .cursor {
     width: 150px;
     height: 150px;
@@ -127,34 +134,33 @@ a {
 
 /* Language Toggle */
 body.eng {
-    background-color: #F5F5F5;  
+    background-color: #F5F5F5;
 }
 
 body.eng .nav-item,
-body.eng .c-text
- {
-    color: black; 
+body.eng .c-text {
+    color: black;
 }
 
 body.eng .chinese-text {
-    font-family: "crimison-text-italic",serif;
+    font-family: "crimson-text-italic", serif;
     font-size: 76px;
     color: black;
 }
 
 body.eng .report-text {
-    font-family: "crimison-text-reg",serif;
+    font-family: "crimson-text-reg", serif;
     font-size: 24px;
-    color: black
+    color: black;
 }
 
 body.eng .report-heading::before {
-    font-family: "crimison-text-italic", serif;
-    font-weight: 400; /* Adjust this value for English */
+    font-family: "crimson-text-italic", serif;
+    font-weight: 400;
 }
 
 body.eng .bottom-txt .chinese-text {
     font-family: "fathers", serif;
     font-size: 24px;
-    color: black;  /* Change text color to black in the bottom text */
+    color: black;
 }

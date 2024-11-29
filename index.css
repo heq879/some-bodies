@@ -44,7 +44,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .nav-item {
@@ -64,28 +64,31 @@ a {
 }
 
 .main-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4rem 2rem;
-        gap: 2rem;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    flex-grow: 1; /* Allow content to grow and fill space */
+}
+
 
 .title {
     font-family: notoserif-light;
     font-weight: 400;
     color: #BB0000;
     font-size: 96px;
-    z-index: 2;
     margin-top: 0;
+    position: relative; /* Add positioning for z-index to work */
+    z-index: 2;
 }
 
 .main-image {
     max-width: 497px;
     width: 80%;
     height: auto;
-    z-index: 1;
     margin-top: -20px;
+    z-index: 1;
 }
 
 .subtitle {
@@ -94,8 +97,9 @@ a {
     font-size: 200px;
     font-weight: 200;
     font-style: italic;
+    margin-top: -160px;
+    position: relative; /* Add positioning for z-index to work */
     z-index: 2;
-    margin-top: -160px; 
 }
 
 .bottom-txt {
@@ -112,16 +116,16 @@ a {
 
 /* Change color for English*/
 body.eng {
-    background-color: #F5F5F5;  
+    background-color: #F5F5F5;
 }
 
 body.eng .nav-item,
-body.eng .c-text{
-    color: black;  
+body.eng .c-text {
+    color: black;
 }
 
 body.eng .bottom-txt .chinese-text {
     font-family: "fathers", serif;
     font-size: 24px;
-    color: black;  /* Change text color to black in the bottom text */
+    color: black;
 }

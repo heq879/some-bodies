@@ -20,12 +20,12 @@
 }
 
 @font-face {
-    font-family: "crimison-text-reg";
+     font-family: "crimson-text-reg"; 
     src: url("asset/CrimsonText-Regular.ttf");
 }
 
 @font-face {
-    font-family: "crimison-text-italic";
+    font-family: "crimson-text-italic";
     src: url("asset/CrimsonText-Italic.ttf");
 }
 
@@ -50,7 +50,7 @@ a {
     justify-content: space-between;
     padding: 2rem;
     font-size: 24px;
-    font-family: "fathers",serif;
+    font-family: "fathers", serif;
     position: fixed;
     top: 0;
     left: 0;

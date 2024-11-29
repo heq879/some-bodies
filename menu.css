@@ -15,15 +15,16 @@
 }
 
 @font-face {
-    font-family: "crimison-text-reg";
+    font-family: "crimson-text-reg";
     src: url("asset/CrimsonText-Regular.ttf");
 }
 
 @font-face {
-    font-family: "crimison-text-italic";
+    font-family: "crimson-text-italic";
     src: url("asset/CrimsonText-Italic.ttf");
 }
 
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +33,7 @@
 body {
     background-color: #111;
     min-height: 100vh;
+    font-size: 16px; /* Base font size */
 }
 
 a {
@@ -43,18 +45,18 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    font-size: 24px;
+    font-size: 1.5rem; /* Flexible font size */
     font-family: "fathers",serif;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure nav stays above other content */
+    z-index: 1000;
 }
 
 .nav-item {
     position: relative;
-    color:white;
+    color: white;
 }
 
 .main-link {
@@ -69,9 +71,7 @@ a {
     transform: translateX(-50%);
     min-width: 150px;
     z-index: 1000;
-
 }
-
 
 .dropdown-menu a {
     display: block;
@@ -87,10 +87,9 @@ a {
     display: block;
 }
 
-
 .c-text {
     font-family: "notoserif-rg",serif;
-    font-size: 24px;
+    font-size: 1.5rem; /* Flexible font size */
     color: white;
     text-align: center;
 }
@@ -107,7 +106,7 @@ a {
     font-family: "notoserif-rg",serif;
     font-weight: 500;
     color: white;
-    font-size: 64px;
+    font-size: 4rem; /* Flexible font size */
     margin-top: 100px;
 }
 
@@ -118,7 +117,7 @@ a {
 
 .list-item {
     display: flex;
-    justify-content: space-between; /* Keeps value on the right */
+    justify-content: space-between;
     padding: 1.5rem 0;
     border-bottom: 2.5px dotted white;
     align-items: center;
@@ -128,7 +127,7 @@ a {
     display: flex;
     align-items: center;
     gap: 8px;
-    position: relative;
+    position: relative; /* Ensures .hover-image is positioned correctly */
 }
 
 .hover-image {
@@ -146,19 +145,19 @@ a {
 
 .item-number {
     font-family: "crimison-text-reg",serif;
-    font-size: 24px;
+    font-size: 1.5rem; /* Flexible font size */
     color: white;
 }
 
 .chinese-text.item-description {
     font-family: "notoserif-rg", serif;
-    font-size: 16px;
+    font-size: 1rem; /* Flexible font size */
     color: white;
 }
 
 .item-value {
     font-family: "crimison-text-reg",serif;
-    font-size: 24px;
+    font-size: 1.5rem; /* Flexible font size */
     color: white;
 }
 
@@ -176,7 +175,7 @@ body.eng .item-value {
 
 body.eng .chinese-text.item-description {
     font-family: "crimison-text-reg",serif;
-    font-size: 18px;
+    font-size: 1.125rem; /* Slightly larger for better readability */
     color: black;
 }
 
@@ -190,8 +189,8 @@ body.eng .list-item {
 
 body.eng .chinese-text {
     font-family: "crimison-text-italic",serif;
-    font-size: 76px; 
-    color:black;
+    font-size: 4.75rem; 
+    color: black;
 }
 
 body.eng .dropdown-menu a {
