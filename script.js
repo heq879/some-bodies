@@ -49,12 +49,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Function to apply initial language state
+    // Function to apply language state
     function applyLanguageState() {
         if (isEnglish) {
+            document.documentElement.setAttribute('lang', 'en'); // Set lang to English
             document.body.classList.add('eng');
             updateLanguageTexts(true);
         } else {
+            document.documentElement.setAttribute('lang', 'zh'); // Set lang to Chinese
             document.body.classList.remove('eng');
             updateLanguageTexts(false);
         }
@@ -69,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Toggle the 'eng' class
         document.body.classList.toggle('eng');
+        
+        // Update the lang attribute on <html>
+        document.documentElement.setAttribute('lang', isEnglish ? 'en' : 'zh');
         
         // Update texts and inputs
         updateLanguageTexts(isEnglish);
@@ -126,3 +131,4 @@ document.addEventListener('DOMContentLoaded', function () {
         image.style.backgroundImage = `url('${imageUrl}')`;
     });
 });
+
