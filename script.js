@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM content loaded');
-    
     // Get initial language state from localStorage
     let isEnglish = localStorage.getItem('isEnglish') === 'true';
 
@@ -29,6 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
             element.textContent = toEnglish 
                 ? element.getAttribute('data-en')
                 : element.getAttribute('data-zh');
+        });
+
+        // Update dropdown menu elements (if applicable)
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+        dropdownLinks.forEach(function(link) {
+            link.textContent = toEnglish 
+                ? link.getAttribute('data-en')
+                : link.getAttribute('data-cn');
         });
 
         // Update input fields and labels
@@ -125,4 +131,3 @@ document.addEventListener('DOMContentLoaded', function () {
         image.style.backgroundImage = `url('${imageUrl}')`;
     });
 });
-

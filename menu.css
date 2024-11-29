@@ -144,7 +144,7 @@ a {
 }
 
 .item-number {
-    font-family: "crimison-text-reg",serif;
+    font-family: "crimson-text-reg",serif;
     font-size: 1.5rem; /* Flexible font size */
     color: white;
 }
@@ -156,7 +156,7 @@ a {
 }
 
 .item-value {
-    font-family: "crimison-text-reg",serif;
+    font-family: "crimson-text-reg",serif;
     font-size: 1.5rem; /* Flexible font size */
     color: white;
 }
@@ -174,7 +174,7 @@ body.eng .item-value {
 }
 
 body.eng .chinese-text.item-description {
-    font-family: "crimison-text-reg",serif;
+    font-family: "crimson-text-reg",serif;
     font-size: 1.125rem; /* Slightly larger for better readability */
     color: black;
 }
@@ -188,7 +188,7 @@ body.eng .list-item {
 }
 
 body.eng .chinese-text {
-    font-family: "crimison-text-italic",serif;
+    font-family: "crimson-text-italic",serif;
     font-size: 4.75rem; 
     color: black;
 }
